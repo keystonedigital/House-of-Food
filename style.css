@@ -1074,8 +1074,10 @@ body {
 
 .menu-reviews-layout {
   display: flex;
-  gap: 2rem;
-  align-items: stretch;
+  gap: 1.5rem;
+  align-items: stretch; /* Equal height */
+  flex-direction: row; /* Keep side by side also on mobile */
+  overflow-x: auto; /* Allow horizontal scroll if narrow screen */
 }
 
 @media (max-width: 600px) {
@@ -1114,13 +1116,12 @@ body {
   }
 }
 
-.menu-section, 
-.reviews-section {
+.menu-section, .reviews-section {
   flex: 1 1 0;
-  /* Remove any fixed height or overflow */
-  height: auto !important;
-  max-height: none !important;
-  overflow: visible !important;
+  min-width: 300px; /* Minimum width so mobile doesn't wrap */
+  max-width: 600px; /* Optional max-width */
+  display: flex;
+  flex-direction: column;
 }
 
 .menu-section-title {
@@ -1159,6 +1160,14 @@ body {
   height: 3px;
   background: linear-gradient(90deg, var(--irish-green), var(--golden-yellow));
   transition: var(--transition-standard);
+}
+
+.menu-section .menu-grid,
+.reviews-section .reviews-scroll-container {
+  overflow-y: auto;
+  flex-grow: 1;
+  max-height: 70vh; /* Or a fixed height */
+  padding-right: 1rem;
 }
 
 .menu-item:hover {

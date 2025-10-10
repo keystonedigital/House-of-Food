@@ -1079,15 +1079,27 @@ body {
 }
 
 @media (max-width: 600px) {
-  .reviews-scroll-container {
-    max-height: 220px;
-    overflow-y: auto;
-    padding-right: 0.5rem;
-    transition: max-height 0.3s;
+  .menu-reviews-layout {
+    flex-direction: column;
+    gap: 1rem;
   }
   .menu-section, .reviews-section {
     min-width: 100%;
     padding: 0;
+    height: auto; /* Allow natural height */
+    flex: none;   /* Disable flex grow/shrink */
+  }
+  .reviews-scroll-container {
+    max-height: none !important;
+    height: auto !important;
+    overflow-y: visible !important;
+    padding-right: 0.5rem;
+  }
+  .review-card.extra-review {
+    display: block; /* Show all reviews */
+  }
+  .show-more-btn {
+    display: none; /* Hide show more on mobile with natural height */
   }
 }
 

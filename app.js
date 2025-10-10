@@ -1,4 +1,22 @@
 // Modern JavaScript for House of Food Restaurant Website
+// Make sure this is in the global scope!
+function showMoreReviews() {
+  document.querySelectorAll('.review-card.extra-review').forEach(el => el.style.display = 'block');
+  const btn = document.querySelector('.show-more-btn');
+  if (btn) btn.style.display = 'none';
+}
+
+window.addEventListener('DOMContentLoaded', function() {
+  if (
+    window.innerWidth <= 600 &&
+    document.querySelectorAll('.review-card.extra-review').length > 0
+  ) {
+    const btn = document.querySelector('.show-more-btn');
+    if (btn) btn.style.display = 'block';
+  }
+});
+
+
 class HouseOfFoodApp {
     constructor() {
         this.init();

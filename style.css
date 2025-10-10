@@ -1075,7 +1075,31 @@ body {
 .menu-reviews-layout {
   display: flex;
   gap: 2rem;
-  align-items: stretch; /* Makes children same height */
+  align-items: stretch;
+}
+
+@media (max-width: 600px) {
+  .reviews-scroll-container {
+    max-height: 220px;
+    overflow-y: auto;
+    padding-right: 0.5rem;
+    transition: max-height 0.3s;
+  }
+  .menu-section, .reviews-section {
+    min-width: 100%;
+    padding: 0;
+  }
+}
+
+@media (min-width: 601px) {
+  .reviews-scroll-container {
+    max-height: 400px;
+    overflow-y: auto;
+    padding-right: 1rem;
+  }
+  .menu-section, .reviews-section {
+    flex: 1 1 0;
+  }
 }
 
 .menu-section, 

@@ -28,9 +28,10 @@
 
 .menu-reviews-layout {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* two equal columns */
+  grid-template-columns: 1fr 1fr;
   gap: 2rem;
-  align-items: stretch; /* make columns the same height */
+  align-items: stretch;
+  height: auto;
 }
 
 
@@ -146,43 +147,16 @@
   flex: 1 1 auto;
 }
 
-@media (max-width: 768px) {
-  .menu-reviews-layout {
-    flex-direction: row; /* keep them side-by-side */
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .menu-section,
-  .reviews-section {
-    flex: 0 0 85%; /* each column takes 85% width of viewport to allow horizontal swipe */
-    min-width: 280px; /* give a sensible minimum */
-  }
-
-  /* limit vertical scroll inside reviews on small screens (JS will shrink to menu height) */
-  .reviews-scroll-container {
-    max-height: 80vh;
-    overflow-y: auto;
-  }
-}
-
-/* Reviews Section - FIXED SCROLLING */
 .menu-section,
 .reviews-section {
   height: 100%;
+  min-height: 0; /* Important for flex children */
   display: flex;
   flex-direction: column;
 }
 
 .menu-section, .reviews-section, .reviews-scroll-container {
   max-height: none;
-}
-
-@media (max-width: 768px) {
-  .menu-reviews-layout {
-    grid-template-columns: 1fr; /* single column stack */
-  }
 }
 
 .reviews-section {
@@ -204,7 +178,7 @@
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   box-sizing: border-box;
-  padding-right: 0.5rem; /* keep scrollbar padding */
+  padding-right: 0.5rem;
 }
 
 .reviews-scroll-container::-webkit-scrollbar {

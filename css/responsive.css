@@ -3,23 +3,32 @@
     display: flex;
   }
 
-    .menu-reviews-layout {
-    display: grid;                /* Use CSS Grid for equal height columns */
-    grid-template-columns: 1fr;  /* Stack menu and reviews vertically */
-    gap: 2rem;                   /* space between stacked sections */
-  }
-
-  .reviews-scroll-container {
-    max-height: none !important; /* Remove fixed height restriction */
-    height: auto !important;     /* Allow reviews container to grow naturally */
-    overflow-y: visible !important; /* Disable scroll inside reviews */
+  .menu-reviews-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* two columns side by side */
+    gap: 1rem;                      /* spacing between columns */
+    align-items: stretch;           /* equal height columns */
+    overflow-x: auto;               /* allow horizontal scroll if needed */
+    scroll-snap-type: x mandatory; /* smooth scroll snap */
   }
 
   .menu-section,
   .reviews-section {
-    height: auto !important;     /* Let sections grow based on content */
+    height: 100%;                  /* fill full cell height */
+    display: flex;
+    flex-direction: column;
+    min-width: 280px;              /* sensible minimum width */
+    scroll-snap-align: start;     /* snap alignment for scroll */
   }
-  
+
+  .reviews-scroll-container {
+    flex: 1 1 auto;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    box-sizing: border-box;
+    padding-right: 0.5rem; /* keep room for scrollbar */
+  }
+
   .nav-menu {
     position: fixed;
     top: 70px;
@@ -34,64 +43,60 @@
     transition: var(--transition-standard);
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
   }
-  
+
   .nav-menu.active {
     left: 0;
   }
-  
+
   .hero-title-main {
     font-size: 2.5rem;
   }
-  
+
   .hero-tagline {
     font-size: 1.4rem;
   }
-  
+
   .section-title {
     font-size: 2.3rem;
-  color: var(--hof-orange-dark);
-  font-family: Playfair Display, serif;
-  letter-spacing: -0.5px;
+    color: var(--hof-orange-dark);
+    font-family: Playfair Display, serif;
+    letter-spacing: -0.5px;
   }
-  
+
   .about-content {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
-  
+
   .footer-content {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
-  
+
   .footer-info {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
-  
+
   .container {
     padding: 0 1rem;
   }
-  
+
   .section-padding {
     padding: 3rem 0;
   }
-  
+
   .gallery-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .contact-info-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
-  
+
   .contact-info-item {
     padding: 2rem 1.5rem;
-  }
-
-  .reviews-scroll-container {
-    height: 350px;
   }
 }
 
@@ -99,29 +104,47 @@
   .hero-title-main {
     font-size: 2rem;
   }
-  
+
   .hero-tagline {
     font-size: 1.2rem;
   }
-  
+
   .nav-container {
     padding: 0 1rem;
   }
-  
+
   .menu-item {
     padding: 1rem;
   }
-  
+
   .menu-item-name {
     font-size: 1rem;
   }
-  
+
   .menu-item-price {
     font-size: 0.95rem;
   }
-  
+
   .review-card {
     padding: 1rem;
+  }
+
+  .menu-reviews-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* maintain two column layout on small phones */
+    gap: 1rem;
+    align-items: stretch;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+
+  .menu-section,
+  .reviews-section {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    min-width: 280px;
+    scroll-snap-align: start;
   }
 }
 

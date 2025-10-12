@@ -5,28 +5,29 @@
 
   .menu-reviews-layout {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* two columns side by side */
-    gap: 1rem;                      /* spacing between columns */
+    grid-template-columns: 1fr 1fr; /* two side-by-side equal columns */
+    gap: 1rem;
     align-items: stretch;           /* equal height columns */
-    overflow-x: auto;               /* allow horizontal scroll if needed */
-    scroll-snap-type: x mandatory; /* smooth scroll snap */
+    width: 100vw;                   /* full viewport width */
+    overflow-x: hidden;             /* no horizontal scroll */
   }
 
   .menu-section,
   .reviews-section {
-    height: 100%;                  /* fill full cell height */
+    height: calc(100vh - 100px);  /* fill viewport height minus header/footer */
+    min-width: 0;                 /* allow column to shrink */
     display: flex;
     flex-direction: column;
-    min-width: 280px;              /* sensible minimum width */
-    scroll-snap-align: start;     /* snap alignment for scroll */
+    overflow: hidden;             /* contain children */
   }
 
   .reviews-scroll-container {
     flex: 1 1 auto;
-    overflow-y: auto;
+    max-height: 100%;
+    overflow-y: auto;              /* enable vertical scroll */
+    padding-right: 0.5rem;         /* scrollbar space */
     -webkit-overflow-scrolling: touch;
     box-sizing: border-box;
-    padding-right: 0.5rem; /* keep room for scrollbar */
   }
 
   .nav-menu {

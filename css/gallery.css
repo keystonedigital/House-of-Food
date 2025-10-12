@@ -1,0 +1,87 @@
+/* Gallery Section */
+.gallery {
+  background: var(--hof-grey-light); /* Warm light panel background */
+  padding: 5rem 0;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.gallery-item {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 3px 24px rgba(34, 34, 34, 0.08);
+  transition: transform 0.38s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.36s cubic-bezier(0.22, 1, 0.36, 1);
+  outline: none;
+  border: 1.5px solid var(--hof-grey);
+  background: var(--hof-white);
+}
+
+.gallery-item:hover,
+.gallery-item:focus-within {
+  transform: scale(1.03) translateY(-6px);
+  border-color: var(--hof-orange);
+  box-shadow: 0 12px 35px rgba(255, 103, 0, 0.18);
+  z-index: 2;
+}
+
+.gallery-placeholder {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: var(--transition-standard);
+}
+
+.gallery-image {
+  display: block;
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  transition: filter 0.3s;
+  filter: brightness(92%);
+}
+
+.gallery-item:hover .gallery-image,
+.gallery-item:focus-within .gallery-image {
+  filter: brightness(85%) blur(0.5px);
+}
+
+.gallery-item:hover .gallery-placeholder {
+  transform: scale(1.05);
+}
+
+.gallery-overlay {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  background: linear-gradient(to top, rgba(255, 103, 0, 0.93), rgba(255,255,255,0) 90%);
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  color: var(--hof-white);
+  transform: translateY(100%);
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  align-items: flex-end;
+  min-height: 40%;
+}
+
+.gallery-item:hover .gallery-overlay,
+.gallery-item:focus-within .gallery-overlay {
+  transform: translateY(0);
+}
+
+.gallery-item:hover .gallery-overlay {
+  transform: translateY(0);
+}
+
+.gallery-caption {
+  font-weight: 600;
+  font-size: 1.16rem;
+  color: var(--hof-white);
+  letter-spacing: 0.02em;
+  text-shadow: 0 2px 6px rgba(34, 34, 34, 0.22);
+  padding-right: 15px;
+  line-height: 1.3;
+}

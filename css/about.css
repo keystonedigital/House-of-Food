@@ -1,0 +1,56 @@
+/* About Section */
+.about {
+  background: var(--cream-bg);
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.about-description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.about-mission {
+  background: var(--warm-white);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: var(--box-shadow-light);
+  border-left: 4px solid var(--irish-green);
+}
+
+.about-specialties h3 {
+  color: var(--hof-orange-dark);
+  margin-bottom: 1.5rem;
+}
+
+.specialties-list {
+  list-style: none;
+}
+
+.specialty-item {
+  padding: 0.8rem 0;
+  padding-left: 2rem;
+  position: relative;
+  border-bottom: 1px solid rgba(46, 125, 50, 0.1);
+  transition: var(--transition-standard);
+}
+
+.specialty-item::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--irish-green);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.specialty-item:hover {
+  padding-left: 2.5rem;
+  color: var(--irish-green);
+}

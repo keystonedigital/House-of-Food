@@ -1,0 +1,144 @@
+/* Background gradient */
+.hero-background {
+  position: absolute;
+  inset: 0;
+  background-size: 400% 400%;
+  animation: gradientShift 12s ease-in-out infinite;
+  z-index: 0;
+  background: linear-gradient(135deg, var(--hof-orange), var(--hof-orange));
+  color: var(--hof-white);
+}
+
+/* Simple overlay for subtle darkening */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 1;
+}
+
+/* Floating circles container */
+.hero-floating-elements {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Floating circle style */
+.floating-circle {
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(45deg, rgba(255, 193, 7, 0.15), rgba(46, 125, 50, 0.15));
+  animation: float 6s ease-in-out infinite;
+  opacity: 0.4;
+}
+
+.circle-1 {
+  width: 200px;
+  height: 200px;
+  top: 10%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.circle-2 {
+  width: 150px;
+  height: 150px;
+  top: 60%;
+  right: 10%;
+  animation-delay: 2s;
+}
+
+.circle-3 {
+  width: 100px;
+  height: 100px;
+  bottom: 20%;
+  left: 20%;
+  animation-delay: 4s;
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(180deg);
+  }
+}
+
+/* Existing simplified hero content styles (copy from earlier) */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  width: 90vw;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.hero-title-simple {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: clamp(3rem, 8vw, 5rem);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  animation: fadeIn 2s ease forwards;
+  margin: 0;
+}
+
+.hero-subtitle-simple {
+  font-family: 'Dancing Script', cursive;
+  font-size: clamp(1.2rem, 4vw, 2rem);
+  color: var(--hof-white);
+  opacity: 0;
+  animation: fadeIn 2s ease forwards;
+  animation-delay: 0.8s;
+  margin: 0;
+}
+
+.hero-cta-simple {
+  margin-top: 1.5rem;
+  padding: 1rem 3rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  animation: fadeIn 2s ease forwards;
+  animation-delay: 1.6s;
+  display: inline-block;
+  transition: background 0.4s ease, box-shadow 0.4s ease;
+}
+
+.hero-cta-simple:hover,
+.hero-cta-simple:focus {
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+  outline: none;
+}
+
+.hero-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem; /* space between logo and heading */
+  margin-bottom: 0.5rem;
+}
+
+/* Simple fade-in animation */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}

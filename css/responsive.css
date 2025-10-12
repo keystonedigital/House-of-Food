@@ -1,0 +1,130 @@
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+    .menu-reviews-layout {
+    display: grid;                /* Use CSS Grid for equal height columns */
+    grid-template-columns: 1fr;  /* Stack menu and reviews vertically */
+    gap: 2rem;                   /* space between stacked sections */
+  }
+
+  .reviews-scroll-container {
+    max-height: none !important; /* Remove fixed height restriction */
+    height: auto !important;     /* Allow reviews container to grow naturally */
+    overflow-y: visible !important; /* Disable scroll inside reviews */
+  }
+
+  .menu-section,
+  .reviews-section {
+    height: auto !important;     /* Let sections grow based on content */
+  }
+  
+  .nav-menu {
+    position: fixed;
+    top: 70px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background: var(--warm-white);
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 2rem;
+    transition: var(--transition-standard);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .nav-menu.active {
+    left: 0;
+  }
+  
+  .hero-title-main {
+    font-size: 2.5rem;
+  }
+  
+  .hero-tagline {
+    font-size: 1.4rem;
+  }
+  
+  .section-title {
+    font-size: 2.3rem;
+  color: var(--hof-orange-dark);
+  font-family: Playfair Display, serif;
+  letter-spacing: -0.5px;
+  }
+  
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .footer-info {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .section-padding {
+    padding: 3rem 0;
+  }
+  
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-info-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .contact-info-item {
+    padding: 2rem 1.5rem;
+  }
+
+  .reviews-scroll-container {
+    height: 350px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title-main {
+    font-size: 2rem;
+  }
+  
+  .hero-tagline {
+    font-size: 1.2rem;
+  }
+  
+  .nav-container {
+    padding: 0 1rem;
+  }
+  
+  .menu-item {
+    padding: 1rem;
+  }
+  
+  .menu-item-name {
+    font-size: 1rem;
+  }
+  
+  .menu-item-price {
+    font-size: 0.95rem;
+  }
+  
+  .review-card {
+    padding: 1rem;
+  }
+}
+
+.menu-reviews-layout {
+  align-items: stretch;
+}

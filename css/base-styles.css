@@ -15,7 +15,6 @@ body {
   font-family: 'Open Sans', sans-serif;
   line-height: 1.6;
   color: var(--dark-charcoal);
-  background-color: var(--warm-white);
   overflow-x: hidden;
 }
 

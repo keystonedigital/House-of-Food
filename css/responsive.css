@@ -206,7 +206,7 @@
   }
 
   .about-description {
-  font-size: 0.85rem !important;
+  font-size: 1rem !important;
   line-height: 1.4 !important;
   margin-bottom: 1rem !important;
 }
@@ -216,7 +216,7 @@
   }
 
   .about-mission {
-    font-size: 0.85rem;
+    font-size: small;
     padding: 0.6rem;
     border-radius: 5px;
     border-left: 4px solid var(--irish-green);

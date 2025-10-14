@@ -246,3 +246,11 @@
     font-size: 0.8rem;
   }
 }
+
+
+@media (max-width: 768px) {
+  .about-description {
+    font-size: 50px !important; /* huge font to test */
+    color: red !important;       /* obvious color */
+  }
+}

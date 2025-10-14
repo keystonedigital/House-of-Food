@@ -70,42 +70,47 @@
 
   .about-content {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 1rem;
-    align-items: center;
+    align-items: stretch;
+  }
+
+  .about-text,
+  .about-specialties {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
   }
 
   .about-text {
-    flex-grow: 1;
     width: 100%;
     max-width: 600px;
   }
 
   .about-description {
-    font-size: 0.85rem;
+    font-size: 0.75rem;
     line-height: 1.4;
     margin-bottom: 1rem;
   }
 
-  /* Remove .about-mission styles completely */
-
   .about-specialties h3 {
-    font-size: 1.1rem;
-    margin-bottom: 0.8rem;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
   }
 
   .specialty-item {
-    padding: 0.4rem 0;
-    padding-left: 1.2rem;
-    font-size: 0.8rem;
+    font-size: 1rem;
+    padding-left: 1.8rem;
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
   }
 
   .specialty-item:hover {
-    padding-left: 1.5rem;
+    padding-left: 2.1rem;
   }
 
   .specialty-item::before {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
   }
 
   .footer-content {
@@ -196,32 +201,31 @@
     display: flex;
     flex-direction: column;
     gap: 0.8rem;
-    align-items: center;
+    align-items: stretch;
   }
 
-  .about-text {
-    flex-grow: 1;
+  .about-text,
+  .about-specialties {
+    flex: none;
     width: 100%;
-    max-width: 600px;
   }
 
   .about-description {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     line-height: 1.3;
     margin-bottom: 0.8rem;
   }
 
-  /* Remove all .about-mission references */
-
   .about-specialties h3 {
-    font-size: 1rem;
-    margin-bottom: 0.6rem;
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
   }
 
   .specialty-item {
-    padding: 0.3rem 0;
-    padding-left: 1rem;
-    font-size: 0.75rem;
+    font-size: 0.9rem;
+    padding-left: 1.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
   }
 
   .specialty-item:hover {

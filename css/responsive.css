@@ -138,12 +138,52 @@
 }
 
   .menu-section,
-.reviews-section {
+  .reviews-section {
   min-width: 140px;       /* smaller min width to fit both side by side */
   height: calc(100vh - 100px);  /* equal height */
   display: flex;
   flex-direction: column;
   overflow: hidden;
   flex-shrink: 1;         /* allow shrinking if needed */
+  }
 }
+
+
+/*ABOUT US MOBILE RESIZE*/
+@media (max-width: 480px) {
+  .about-content {
+    display: block; /* stack the two columns vertically */
+    gap: 1.5rem; /* smaller gap when stacked */
+  }
+
+  .about-description {
+    font-size: 1rem; /* smaller text */
+    line-height: 1.6; /* tighter line height */
+    margin-bottom: 1.2rem;
+  }
+
+  .about-mission {
+    padding: 1rem;
+    border-radius: 8px;
+    border-left-width: 3px; /* slightly smaller left border */
+  }
+
+  .about-specialties h3 {
+    font-size: 1.2rem; /* moderately smaller heading */
+    margin-bottom: 1rem;
+  }
+
+  .specialty-item {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem; /* less left padding */
+    font-size: 0.95rem; /* smaller font */
+  }
+
+  .specialty-item:hover {
+    padding-left: 1.8rem; /* keep hover padding proportion */
+  }
+
+  .specialty-item::before {
+    font-size: 1rem; /* smaller check mark */
+  }
 }

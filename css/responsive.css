@@ -44,6 +44,43 @@
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
   }
 
+  .about-content {
+  display: block; /* stack columns vertically */
+  gap: 1.5rem;
+  }
+
+  /* Smaller paragraph and description text */
+  .about-description {
+    font-size: 0.9rem;  /* smaller than desktop but larger than previously */
+    line-height: 1.5;
+    margin-bottom: 1.2rem;
+  }
+
+  .about-mission {
+    padding: 1rem;
+    border-radius: 8px;
+    border-left-width: 3px;
+  }
+
+  .about-specialties h3 {
+    font-size: 1.2rem; /* moderately smaller heading */
+    margin-bottom: 1rem;
+  }
+
+   .specialty-item {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    font-size: 0.85rem; /* smaller font */
+  }
+
+  .specialty-item:hover {
+    padding-left: 1.8rem;
+  }
+
+  .specialty-item::before {
+    font-size: 1rem;
+  }
+
   .nav-menu.active {
     left: 0;
   }

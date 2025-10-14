@@ -63,54 +63,55 @@
     letter-spacing: -0.5px;
   }
 
-  /* Updated About Us styles ignoring .about-mission */
   .about {
     padding: 1.5rem 1rem;
   }
 
+  /* UPDATED .about-content for equal height specialties */
   .about-content {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 1rem;
     align-items: stretch;
-  }
-
-  .about-text,
-  .about-specialties {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
+    height: 100%;
   }
 
   .about-text {
+    flex-grow: 0;
     width: 100%;
     max-width: 600px;
   }
 
   .about-description {
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     line-height: 1.4;
     margin-bottom: 1rem;
   }
 
+  .about-specialties {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
   .about-specialties h3 {
-    font-size: 1.4rem;
-    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
   }
 
   .specialty-item {
-    font-size: 1rem;
-    padding-left: 1.8rem;
-    padding-top: 0.6rem;
-    padding-bottom: 0.6rem;
+    padding: 0.4rem 0;
+    padding-left: 1.2rem;
+    font-size: 0.8rem;
   }
 
   .specialty-item:hover {
-    padding-left: 2.1rem;
+    padding-left: 1.5rem;
   }
 
   .specialty-item::before {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
   }
 
   .footer-content {
@@ -192,7 +193,7 @@
     flex-shrink: 1;
   }
 
-  /* About Us smaller and more compact for narrowest mobiles without .about-mission */
+  /* Updated mobile About Us for smaller screens */
   .about {
     padding: 1rem 0.8rem;
   }
@@ -202,30 +203,30 @@
     flex-direction: column;
     gap: 0.8rem;
     align-items: stretch;
+    height: auto;
   }
 
   .about-text,
   .about-specialties {
-    flex: none;
+    flex-grow: unset;
     width: 100%;
   }
 
   .about-description {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     line-height: 1.3;
     margin-bottom: 0.8rem;
   }
 
   .about-specialties h3 {
-    font-size: 1.2rem;
-    margin-bottom: 0.8rem;
+    font-size: 1rem;
+    margin-bottom: 0.6rem;
   }
 
   .specialty-item {
-    font-size: 0.9rem;
-    padding-left: 1.5rem;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    padding: 0.3rem 0;
+    padding-left: 1rem;
+    font-size: 0.75rem;
   }
 
   .specialty-item:hover {

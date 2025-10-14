@@ -61,7 +61,7 @@
 }
 
 .contact-info-item {
-  background: var(--hof-white);
+  background: var(--hof-grey-light);
   border-radius: 16px;
   box-shadow: 0 3px 24px rgba(34, 34, 34, 0.10);
   border: 1.5px solid var(--hof-grey);

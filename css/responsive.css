@@ -206,16 +206,17 @@
   }
 
   .about-description {
-    font-size: 0.8rem;
-    line-height: 1.3;
-    margin-bottom: 0.8rem;
-  }
+  font-size: 0.85rem !important;
+  line-height: 1.4 !important;
+  margin-bottom: 1rem !important;
+}
 
   .about-text {
     flex-grow: 1;
   }
 
   .about-mission {
+    font-size: 0.85rem;
     padding: 0.6rem;
     border-radius: 5px;
     border-left: 4px solid var(--irish-green);
@@ -248,9 +249,4 @@
 }
 
 
-@media (max-width: 768px) {
-  .about-description {
-    font-size: 50px !important; /* huge font to test */
-    color: red !important;       /* obvious color */
-  }
-}
+

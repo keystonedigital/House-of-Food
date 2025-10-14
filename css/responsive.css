@@ -226,14 +226,14 @@
   .specialty-item {
     padding: 0.3rem 0;
     padding-left: 1rem;
-    font-size: 0.75rem;
+    font-size: 2rem;
   }
 
   .specialty-item:hover {
-    padding-left: 1.3rem;
+    padding-left: 2.3rem;
   }
 
   .specialty-item::before {
-    font-size: 0.8rem;
+    font-size: 2rem;
   }
 }

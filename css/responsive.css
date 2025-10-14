@@ -216,17 +216,18 @@
   }
 
   .about-mission {
-    font-size: small;
-    padding: 0.6rem;
-    border-radius: 5px;
-    border-left: 4px solid var(--irish-green);
-    box-shadow: var(--box-shadow-light);
+  display: block;
+  margin: 1.2rem auto 0 auto;
+  max-width: 90%;
+  text-align: center;
+  border-left-width: 1.5px;
+  padding: 0.6rem;
+  border-radius: 5px;
+  border-left: 4px solid var(--irish-green);
+  box-shadow: var(--box-shadow-light);
+  align-self: center;  /* if parent is flex */
+}
 
-    margin: 1.2rem auto 0 auto; /* center horizontally & margin top */
-    max-width: 90%;              /* narrower max width */
-    text-align: center;
-    border-left-width: 1.5px;
-  }
 
   .about-specialties h3 {
     font-size: 1rem;

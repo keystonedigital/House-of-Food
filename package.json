@@ -1,0 +1,26 @@
+{
+  "name": "houseoffood",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+  "sass": "sass --watch scss:css"
+},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/keystonedigital/House-of-Food.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/keystonedigital/House-of-Food/issues"
+  },
+  "homepage": "https://github.com/keystonedigital/House-of-Food#readme",
+  "devDependencies": {
+    "sass": "^1.93.2"
+  }
+
+}
+
+

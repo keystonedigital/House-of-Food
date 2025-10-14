@@ -4,22 +4,21 @@
   }
 
   .menu-reviews-layout {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* two side-by-side equal columns */
-    gap: 1rem;
-    align-items: stretch;           /* equal height columns */
-    width: 100vw;                   /* full viewport width */
-    overflow-x: hidden;             /* no horizontal scroll */
-  }
+  grid-template-columns: 1fr 1fr; /* keep two columns */
+  max-width: 100vw;               /* limit to viewport width */
+  gap: 0.5rem;                   /* smaller gap to save space */
+  overflow-x: hidden;            /* prevent horizontal scroll */
+}
 
   .menu-section,
-  .reviews-section {
-    height: calc(100vh - 100px);  /* fill viewport height minus header/footer */
-    min-width: 0;                 /* allow column to shrink */
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;             /* contain children */
-  }
+.reviews-section {
+  min-width: 140px;       /* smaller min width to fit both side by side */
+  height: calc(100vh - 100px);  /* equal height */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  flex-shrink: 1;         /* allow shrinking if needed */
+}
 
   .reviews-scroll-container {
     flex: 1 1 auto;
@@ -131,24 +130,20 @@
   }
 
   .menu-reviews-layout {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* maintain two column layout on small phones */
-    gap: 1rem;
-    align-items: stretch;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-  }
-
-  .menu-section,
-  .reviews-section {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    min-width: 280px;
-    scroll-snap-align: start;
-  }
+  grid-template-columns: 1fr 1fr; /* keep two columns */
+  max-width: 100vw;               /* limit to viewport width */
+  gap: 0.5rem;                   /* smaller gap to save space */
+  overflow-x: hidden;            /* prevent horizontal scroll */
+  align-items: stretch;
 }
 
-.menu-reviews-layout {
-  align-items: stretch;
+  .menu-section,
+.reviews-section {
+  min-width: 140px;       /* smaller min width to fit both side by side */
+  height: calc(100vh - 100px);  /* equal height */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  flex-shrink: 1;         /* allow shrinking if needed */
+}
 }

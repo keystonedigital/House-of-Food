@@ -49,32 +49,42 @@
   color: var(--hof-grey-dark);
 }
 
+.btn--primary::before {
+  content: none; /* Remove any pseudo-element gradient overlay */
+}
+
 .btn--primary {
-  position: relative;
-  background: var(--hof-grey-dark);
-  color: var(--hof-white);
+  background-color: var(--hof-grey-dark); /* dark grey background */
+  color: var(--hof-white); /* white text */
   border: none;
   padding: 0.7em 1.8em;
   font-size: 1rem;
   font-weight: 600;
   border-radius: 6px;
   cursor: pointer;
-  transition: background-color 0.35s ease, box-shadow 0.3s ease;
+  transition: background-color 0.35s ease, color 0.35s ease, box-shadow 0.3s ease;
+  position: relative;
   overflow: hidden;
   z-index: 0;
-}
-
-.btn--primary::before {
-  content: none; /* Remove any pseudo-element gradient overlay */
+  text-decoration: none;
 }
 
 .btn--primary:hover,
-.btn--primary:focus {
-  background-color: var(--hof-grey);
-  color: var(--hof-orange);
-  box-shadow: 0 0 15px var(--hof-orange);
+.btn--primary:focus:hover,
+.btn--primary:hover:focus {
+  background-color: var(--hof-grey); /* grey background on hover */
+  color: var(--hof-orange);         /* orange text on hover */
+  box-shadow: 0 0 15px var(--hof-orange); /* glow effect */
   outline: none;
 }
+
+.btn--primary:focus {
+  background-color: var(--hof-grey-dark); /* keep dark grey background on focus */
+  color: var(--hof-white); /* keep white text on focus */
+  outline: 2px solid var(--hof-orange); /* visible focus outline */
+  box-shadow: none;
+}
+
 
 .btn--primary:hover::before {
   content: none;

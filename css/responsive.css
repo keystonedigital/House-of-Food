@@ -146,26 +146,23 @@
   overflow: hidden;
   flex-shrink: 1;         /* allow shrinking if needed */
   }
-}
 
-
-/*ABOUT US MOBILE RESIZE*/
-@media (max-width: 480px) {
   .about-content {
-    display: block; /* stack the two columns vertically */
-    gap: 1.5rem; /* smaller gap when stacked */
+  display: block; /* stack columns vertically */
+  gap: 1.5rem;
   }
 
+  /* Smaller paragraph and description text */
   .about-description {
-    font-size: 1rem; /* smaller text */
-    line-height: 1.6; /* tighter line height */
+    font-size: 0.9rem;  /* smaller than desktop but larger than previously */
+    line-height: 1.5;
     margin-bottom: 1.2rem;
   }
 
   .about-mission {
     padding: 1rem;
     border-radius: 8px;
-    border-left-width: 3px; /* slightly smaller left border */
+    border-left-width: 3px;
   }
 
   .about-specialties h3 {
@@ -173,17 +170,17 @@
     margin-bottom: 1rem;
   }
 
-  .specialty-item {
+   .specialty-item {
     padding: 0.5rem 0;
-    padding-left: 1.5rem; /* less left padding */
-    font-size: 0.95rem; /* smaller font */
+    padding-left: 1.5rem;
+    font-size: 0.85rem; /* smaller font */
   }
 
   .specialty-item:hover {
-    padding-left: 1.8rem; /* keep hover padding proportion */
+    padding-left: 1.8rem;
   }
 
   .specialty-item::before {
-    font-size: 1rem; /* smaller check mark */
+    font-size: 1rem;
   }
 }

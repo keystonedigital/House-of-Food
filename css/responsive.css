@@ -63,7 +63,7 @@
     letter-spacing: -0.5px;
   }
 
-  /* Smaller, more compact About Us section */
+  /* Smaller, more compact About Us section with proper flex centering */
   .about {
     padding: 1.5rem 1rem; /* reduce section padding */
   }
@@ -71,40 +71,44 @@
   .about-content {
     display: flex;
     flex-direction: column;
-    gap: 1rem; /* smaller gap */
+    gap: 1rem;            /* smaller gap */
+    align-items: center;  /* center children horizontally */
+  }
+
+  .about-text {
+    flex-grow: 1;
+    width: 100%;
+    max-width: 600px;      /* limit max width */
   }
 
   .about-description {
-    font-size: 0.85rem;  /* reduce font size */
+    font-size: 0.85rem;    /* reduce font size */
     line-height: 1.4;
     margin-bottom: 1rem;
   }
 
-  /* Centre about-mission box horizontally and place at bottom */
-  .about-text {
-    flex-grow: 1;
-  }
-
   .about-mission {
-    padding: 0.8rem;         /* reduce padding */
+    flex-shrink: 0;        /* prevent shrinking */
+    max-width: 500px;      /* limit width */
+    width: 90%;            /* responsive */
+    text-align: center;
+    margin: 1.5rem 0 0 0;  /* margin top only */
+    padding: 0.8rem;
     border-radius: 6px;
     border-left: 4px solid var(--irish-green);
     box-shadow: var(--box-shadow-light);
-
-    margin: 1.5rem auto 0 auto; /* center horizontally & margin top */
-    max-width: 500px;            /* limit max width */
-    text-align: center;
+    align-self: center;    /* center horizontally */
   }
 
   .about-specialties h3 {
-    font-size: 1.1rem;   /* slightly smaller heading */
+    font-size: 1.1rem;     /* slightly smaller heading */
     margin-bottom: 0.8rem;
   }
 
   .specialty-item {
     padding: 0.4rem 0;
     padding-left: 1.2rem;
-    font-size: 0.8rem;    /* smaller font */
+    font-size: 0.8rem;     /* smaller font */
   }
 
   .specialty-item:hover {
@@ -112,7 +116,7 @@
   }
 
   .specialty-item::before {
-    font-size: 0.9rem;    /* smaller check mark */
+    font-size: 0.9rem;     /* smaller check mark */
   }
 
   .footer-content {
@@ -196,38 +200,42 @@
 
   /* About Us smaller and more compact for narrowest mobiles */
   .about {
-    padding: 1rem 0.8rem;  /* even smaller padding */
+    padding: 1rem 0.8rem;          /* even smaller padding */
   }
 
   .about-content {
     display: flex;
     flex-direction: column;
     gap: 0.8rem;
+    align-items: center;           /* center horizontally */
   }
-
-  .about-description {
-  font-size: 1rem !important;
-  line-height: 1.4 !important;
-  margin-bottom: 1rem !important;
-}
 
   .about-text {
     flex-grow: 1;
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .about-description {
+    font-size: 0.8rem;
+    line-height: 1.3;
+    margin-bottom: 0.8rem;
   }
 
   .about-mission {
-  display: block;
-  margin: 1.2rem auto 0 auto;
-  max-width: 90%;
-  text-align: center;
-  border-left-width: 1.5px;
-  padding: 0.6rem;
-  border-radius: 5px;
-  border-left: 4px solid var(--irish-green);
-  box-shadow: var(--box-shadow-light);
-  align-self: center;  /* if parent is flex */
-}
+    flex-shrink: 0;
+    font-size: small;
+    padding: 0.6rem;
+    border-radius: 5px;
+    border-left: 4px solid var(--irish-green);
+    box-shadow: var(--box-shadow-light);
 
+    margin: 1.2rem 0 0 0;         /* margin top only */
+    max-width: 90%;               /* narrower max width */
+    text-align: center;
+    border-left-width: 1.5px;
+    align-self: center;           /* center horizontally */
+  }
 
   .about-specialties h3 {
     font-size: 1rem;
@@ -248,6 +256,3 @@
     font-size: 0.8rem;
   }
 }
-
-
-

@@ -69,8 +69,9 @@
   }
 
   .about-content {
-    display: block; /* stack columns vertically */
-    gap: 1rem;      /* smaller gap */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* smaller gap */
   }
 
   .about-description {
@@ -79,10 +80,20 @@
     margin-bottom: 1rem;
   }
 
+  /* Centre about-mission box horizontally and place at bottom */
+  .about-text {
+    flex-grow: 1;
+  }
+
   .about-mission {
     padding: 0.8rem;         /* reduce padding */
     border-radius: 6px;
-    border-left-width: 2px;  /* thinner border */
+    border-left: 4px solid var(--irish-green);
+    box-shadow: var(--box-shadow-light);
+
+    margin: 1.5rem auto 0 auto; /* center horizontally & margin top */
+    max-width: 500px;            /* limit max width */
+    text-align: center;
   }
 
   .about-specialties h3 {
@@ -189,8 +200,9 @@
   }
 
   .about-content {
+    display: flex;
+    flex-direction: column;
     gap: 0.8rem;
-    display: block;        /* stack columns vertically */
   }
 
   .about-description {
@@ -199,9 +211,19 @@
     margin-bottom: 0.8rem;
   }
 
+  .about-text {
+    flex-grow: 1;
+  }
+
   .about-mission {
     padding: 0.6rem;
     border-radius: 5px;
+    border-left: 4px solid var(--irish-green);
+    box-shadow: var(--box-shadow-light);
+
+    margin: 1.2rem auto 0 auto; /* center horizontally & margin top */
+    max-width: 90%;              /* narrower max width */
+    text-align: center;
     border-left-width: 1.5px;
   }
 
